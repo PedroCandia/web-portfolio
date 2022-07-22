@@ -1,20 +1,70 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      &lt; Pedro Candia <span>/</span>&gt;
     </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="toSeccion('home')">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="toSeccion('skills')">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </ion-button>
+      <ion-button id="contact" (click)="toSeccion('skills')">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div id="home">
+    <div id="home-content">
+      <ion-text id="title">Pedro Candia Vazquez</ion-text>
+      <ion-text id="subtitle">Desarrollador <span>web</span></ion-text>
+    </div>
+  </div>
+  
+  <div id="skills">
+    <div id="skills-content">
+      <div id="content-frontend">
+        <ion-text>Front-end developer</ion-text>
+  
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label>HTML</ion-label>
+                <ion-label>CSS</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label>JavaScript</ion-label>
+                <ion-label>Angular</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label>Ionic</ion-label>
+                <ion-label>Git</ion-label>      
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div>
+
+      <div id="content-backend">
+        <ion-text>Back-end developer</ion-text>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-label>Node JS</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>Firebase</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+      </div>
+      
+    </div>
   </div>
 </ion-content>

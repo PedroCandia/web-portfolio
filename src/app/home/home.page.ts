@@ -5,8 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage{
 
   constructor() {}
 
+  toSeccion(secccion){
+    document.querySelector(`#${secccion}`).scrollIntoView({behavior:'smooth'});
+  }
 }
