@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      &lt; Pedro Candia <span>/</span>&gt;
+      &lt;<span>/</span> Pedro Candia &gt;
     </ion-title>
     <ion-buttons slot="secondary">
       <ion-button (click)="toSeccion('home')">
@@ -10,9 +10,7 @@
       <ion-button (click)="toSeccion('skills')">
         <ion-icon name="briefcase-outline"></ion-icon>
       </ion-button>
-      <ion-button id="contact" (click)="toSeccion('skills')">
-        <ion-icon name="paper-plane-outline"></ion-icon>
-      </ion-button>
+      <ion-toggle (ionChange)="toggleTheme($event)" [(ngModel)]="toggleDarkMode"></ion-toggle>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -27,9 +25,8 @@
   
   <div id="skills">
     <div id="skills-content">
-      <div id="content-frontend">
-        <ion-text>Front-end developer</ion-text>
-  
+      <div id="content-technologies">
+        <ion-text>Tecnologias</ion-text>
           <ion-grid>
             <ion-row>
               <ion-col>
@@ -44,27 +41,13 @@
                 <ion-label>Ionic</ion-label>
                 <ion-label>Git</ion-label>      
               </ion-col>
+              <ion-col>
+                <ion-label>Node JS</ion-label>
+                <ion-label>Firebase</ion-label>
+              </ion-col>
             </ion-row>
           </ion-grid>
-
       </div>
-
-      <div id="content-backend">
-        <ion-text>Back-end developer</ion-text>
-
-            <ion-grid>
-              <ion-row>
-                <ion-col>
-                  <ion-label>Node JS</ion-label>
-                </ion-col>
-                <ion-col>
-                  <ion-label>Firebase</ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-
-      </div>
-      
     </div>
   </div>
 </ion-content>

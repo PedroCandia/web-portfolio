@@ -8,10 +8,6 @@ ion-header{
   ion-toolbar{
     padding: 0 5em;
   }
-
-  #contact{
-    color: #ED5EDD;
-  }
 }
 
 #home {
@@ -19,11 +15,9 @@ ion-header{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: white;
 
   #home-content{
     display: grid;
-    color: black;
 
     #title{
       font-size: 4em;
@@ -39,7 +33,7 @@ ion-header{
 }
 
 span {
-  color: #ED5EDD;
+  color: var(--ion-color-pink);
 }
 
 #skills{
@@ -67,12 +61,13 @@ span {
       }
     }
 
-    #content-frontend{
-      text-align: center;
-    }
-    
-    #content-backend{
+    #content-technologies{
       text-align: center;
     }
   }
+}
+
+ion-toggle {
+  --background-checked: var(--ion-color-pink);
+  --handle-background-checked: var(--ion-color-pink-shade);
 }
