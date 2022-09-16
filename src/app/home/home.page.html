@@ -18,32 +18,38 @@
 <ion-content>
   <div id="home">
     <div id="home-content">
-      <ion-text id="title">Pedro Candia Vazquez</ion-text>
+      <ion-text id="title">Pedro Candia</ion-text>
       <ion-text id="subtitle">Desarrollador <span>web</span></ion-text>
     </div>
   </div>
   
   <div id="skills">
     <div id="skills-content">
-      <div id="content-technologies">
+      <div id="technologies-content">
         <ion-text>Tecnologias</ion-text>
           <ion-grid>
             <ion-row>
-              <ion-col>
-                <ion-label>HTML</ion-label>
-                <ion-label>CSS</ion-label>
+              <ion-col *ngFor="let technologie of technologies1">
+                <div id="tech-content">
+                  <div id="img-content">
+                    <ion-img src="{{technologie.srcImg}}"></ion-img>
+                  </div>
+                  <ion-label style="width:90%">
+                    {{technologie.attribute}}
+                  </ion-label>
+                </div>
               </ion-col>
-              <ion-col>
-                <ion-label>JavaScript</ion-label>
-                <ion-label>Angular</ion-label>
-              </ion-col>
-              <ion-col>
-                <ion-label>Ionic</ion-label>
-                <ion-label>Git</ion-label>      
-              </ion-col>
-              <ion-col>
-                <ion-label>Node JS</ion-label>
-                <ion-label>Firebase</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-col *ngFor="let technologie of technologies2">
+                <div id="tech-content">
+                  <div id="img-content">
+                    <ion-img src="{{technologie.srcImg}}"></ion-img>
+                  </div>
+                  <ion-label style="width:90%">
+                    {{technologie.attribute}}
+                  </ion-label>
+                </div>
               </ion-col>
             </ion-row>
           </ion-grid>

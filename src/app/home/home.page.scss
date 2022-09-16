@@ -44,14 +44,17 @@ span {
   width: 100%;
  
   #skills-content{
-    width: 65%;
+    width: 80%;
     font-size: 2em;
     font-family: 'Chakra Petch', sans-serif;
 
     ion-grid{
       ion-row{
         ion-col{
-          display: grid;
+          display: flex; 
+          justify-content: center; 
+          align-items: center;
+          min-width: 13rem;
 
           ion-label{
             font-family: 'Chakra Petch', sans-serif;
@@ -61,7 +64,7 @@ span {
       }
     }
 
-    #content-technologies{
+    #technologies-content{
       text-align: center;
     }
   }
@@ -70,4 +73,23 @@ span {
 ion-toggle {
   --background-checked: var(--ion-color-pink);
   --handle-background-checked: var(--ion-color-pink-shade);
+}
+
+#tech-content {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  width: 70%;
+
+  #img-content {
+    width:10%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+    ion-img {
+      width: 28px; 
+      height: 28px
+    }
+  }
 }
