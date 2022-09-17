@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
       &lt;<span>/</span> Pedro Candia &gt;
@@ -13,13 +13,32 @@
       <ion-toggle (ionChange)="toggleTheme($event)" [(ngModel)]="toggleDarkMode"></ion-toggle>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <div id="home">
-    <div id="home-content">
-      <ion-text id="title">Pedro Candia</ion-text>
-      <ion-text id="subtitle">Desarrollador <span>web</span></ion-text>
+  <div id="home-section">
+    <div id="toolbar">
+      <div id="toolbar-content">
+        <div id="toolbar-button" (click)="toSeccion('home')">
+          <ion-text>Sobre mí</ion-text>
+        </div>
+        <div id="toolbar-button" (click)="toSeccion('skills')">
+          <ion-text>Portafolio</ion-text>
+        </div>
+        <div id="toolbar-button">
+          <ion-text>Contacto</ion-text>
+        </div>
+        <div class="toolbar-button-tema">
+          <ion-text>Tema</ion-text> 
+          <ion-toggle (ionChange)="toggleTheme($event)" [(ngModel)]="toggleDarkMode"></ion-toggle>
+        </div>
+      </div>
+    </div>
+    <div id="home">
+      <div id="home-content">
+        <ion-text id="title">Pedro Candia</ion-text>
+        <ion-text id="subtitle">Desarrollador <span>web</span></ion-text>
+      </div>
     </div>
   </div>
   

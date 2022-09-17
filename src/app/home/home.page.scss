@@ -1,33 +1,61 @@
-ion-header{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  
-
-  ion-toolbar{
-    padding: 0 5em;
-  }
-}
-
-#home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#home-section {
   height: 100vh;
 
-  #home-content{
-    display: grid;
+  #toolbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 
-    #title{
-      font-size: 4em;
-      font-family: 'Chakra Petch', sans-serif;
+    #toolbar-content {
+      display: flex; 
+      width: 100%; 
+      justify-content: center; 
+      align-items: center;
+
+      #toolbar-button {
+        margin: 1rem;
+        cursor: pointer;
+
+        ion-text{
+          font-size: 1.5rem;
+          color: var(--ion-color-medium);
+        }
+      }
+
+      .toolbar-button-tema {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+
+        ion-text{
+          font-size: 1.5rem;
+          color: var(--ion-color-medium);
+        }
+      }
     }
-
-    #subtitle{
-      font-size: 2em;
-      font-family: 'Chakra Petch', sans-serif;
-      color: #838383;
+  }
+  
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+    #home-content{
+      display: grid;
+  
+      #title{
+        font-size: 4em;
+        font-family: 'Chakra Petch', sans-serif;
+      }
+  
+      #subtitle{
+        font-size: 2em;
+        font-family: 'Chakra Petch', sans-serif;
+        color: #838383;
+      }
     }
   }
 }
